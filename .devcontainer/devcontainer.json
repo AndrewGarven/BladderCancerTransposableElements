@@ -1,22 +1,22 @@
 {
-    "name": "bladder-te-dev",
-    "build": {
-      "dockerfile": "../Dockerfile"
-    },
-    "workspaceFolder": "/app",
-    "mounts": [
-      "source=${localWorkspaceFolder},target=/app,type=bind"
-    ],
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "python.defaultInterpreterPath": "/usr/local/bin/python"
-        },
-        "extensions": [
-          "ms-python.python"
-        ]
-      }
-    },
-    "postCreateCommand": "pip install -r requirements.txt"
-  }
-  
+  "name": "bladder-te-dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "workspaceFolder": "/app",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind",
+    "source=/Users/andrewgarven/Library/Caches/pyensembl,target=/root/.pyensembl,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}
