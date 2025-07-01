@@ -1,6 +1,6 @@
 # RNA-Seq Classifier
 
-This repository contains a pipeline for training and evaluating a supervised machine learning model to classify RNA sequencing data based on gene expression profiles. The final trained model is saved at:
+This repository contains a pipeline for training and evaluating a supervised machine learning model to classify RNA sequencing data based on Transposable Element expression profiles. The final trained model is saved at:
 
 ```
 results/rna_seq_classifier.joblib
@@ -53,6 +53,7 @@ Ensure that `X_new` is preprocessed in the same way as the training data (e.g., 
 
 ## Requirements
 
+The minimum required working environment is as follows:
 Python >= 3.8 and the following packages:
 
 - pandas
@@ -66,18 +67,16 @@ Install them with:
 pip install -r requirements.txt
 ```
 
-Or manually install the individual packages if `requirements.txt` is not provided.
-
 ## Evaluation
 
 The notebook reports standard classification metrics including:
 
 - Accuracy
 - Confusion matrix
-- ROC-AUC (if applicable)
+- ROC-AUC
 
 ## Notes
 
-- The model assumes input data has been normalized or scaled.
+- The model assumes input data has been normalized or scaled (StandardScalar).
 - The pipeline can be extended to other omics datasets with minimal changes.
 
