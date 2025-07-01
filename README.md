@@ -49,7 +49,10 @@ model = joblib.load("results/rna_seq_classifier.joblib")
 # predictions = model.predict(X_new)
 ```
 
-Ensure that `X_new` is preprocessed in the same way as the training data (e.g., scaled appropriately).
+Ensure that `X_new` is preprocessed in the same way as the training data.
+
+1. vst-normalized (Deseq2)
+2. StandardScaler (Sklearn)
 
 ## Requirements
 
@@ -77,6 +80,6 @@ The notebook reports standard classification metrics including:
 
 ## Notes
 
-- The model assumes input data has been normalized or scaled (StandardScalar).
+- The model assumes input data has been normalized or scaled (StandardScaler).
 - The pipeline can be extended to other omics datasets with minimal changes.
 
